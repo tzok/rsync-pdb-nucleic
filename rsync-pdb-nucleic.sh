@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash
 BACKUP_DIR=/mnt/wdc-hdd/tzok/rsync-pdb-nucleic
 
 mkdir \
@@ -18,6 +18,7 @@ pdbids=($(cat ${BACKUP_DIR}/derived_data/pdb_entry_type.txt | awk '$2 == "nuc" |
 rsync \
 	--archive \
 	--progress \
+	--delete \
 	--include-from=<(printf "%s*\n" ${pdbids[@]}) \
 	--include='*/' \
 	--exclude='*' \
@@ -27,6 +28,7 @@ rsync \
 rsync \
 	--archive \
 	--progress \
+	--delete \
 	--include-from=<(printf "%s*\n" ${pdbids[@]}) \
 	--include='*/' \
 	--exclude='*' \
