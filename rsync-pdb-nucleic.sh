@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 BACKUP_DIR=/mnt/wdc-hdd/tzok/rsync-pdb-nucleic
 
 mkdir \
