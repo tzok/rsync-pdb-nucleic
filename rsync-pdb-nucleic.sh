@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-BACKUP_DIR=/mnt/wdc-hdd/tzok/rsync-pdb-nucleic
+BACKUP_DIR=/home/tzok/rsync-pdb-nucleic
 
 mkdir \
 	--parents \
